@@ -75,7 +75,7 @@ nav {
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 710px) {
   .toggle {
     clear: both;
     display: block;
