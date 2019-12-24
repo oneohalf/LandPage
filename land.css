@@ -2,11 +2,14 @@
 
 * {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Фоновый рисунок */
 
 body {
+
   background-image: url(mats/b.png);
   margin: 2%;
   /* адаптивный отступ от края страницы*/
@@ -20,64 +23,127 @@ body {
   font-style: regular;
   text-transform: uppercase;
   color: #272f31;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 /* Меню */
 
-#menu {
-  margin: 0;
-  /* background-color: rgb(229, 207, 165, 0.1); */
+nav {
+  margin: auto;
+  max-width: 712px;
   width: 100%;
-  z-index: 1;
+
 }
 
-#menu ul {
-  list-style: none;
-  /* Убрать точки в списке*/
-  text-align: center;
-  padding: 1.5%;
+#checkbox-menu,
+.toggle {
+  display: none;
 }
 
-#menu ul li {
-  display: inline-table;
-  padding-left: 5%;
-  padding-top: 0;
-  padding-right: 5%;
-  padding-bottom: 0;
+.menu {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
 }
 
-#menu a {
+.menu li a {
+
   text-decoration: none;
+  align-self: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  transition: 1s;
   color: #615d4a;
   line-height: 1;
   color: #a39c90;
   cursor: pointer;
+
 }
 
-#menu a:after {
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0%;
-  background-color: #354041;
-  transition: width 0.3s ease-in-out;
-}
-
-#menu a:hover:after,
-#menu a:focus:after {
-  width: 100%;
-}
-
-#menu a:hover {
+.menu li a:hover {
   font-weight: bold;
   color: #615d4a;
   transform: scale(1.2);
+  font-size: 110%;
+
 }
 
-@media (max-width: 812px) {
-  #menu {
-    display: none;
+@media screen and (max-width: 650px) {
+  .toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18 px;
+    line height: 40 px;
+    width: 100%;
+    color: #000;
+    background: #a39c90;
+    transition: all .1s linear;
+
+
+
   }
+
+  .toggle:hover {
+    background: #a39c90;
+  }
+
+
+  #checkbox-menu:checked+label .touch li {
+
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s linear;
+
+  }
+
+  #checkbox-menu:checked+label .touch {
+    height: 350px;
+
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+    transition: height .3s linear;
+
+
+  }
+
+  .menu li {
+    display: flex;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu li a {
+    width: 95%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+
+
+  }
+
+
+
+}
+
+
+#kaban {
+  padding-top: 230px;
 }
 
 #kaban img {
@@ -85,7 +151,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 35%;
-  padding-top: 230px;
+
   transition: 1s;
 }
 
@@ -93,19 +159,27 @@ body {
   transform: scale(1.1)
 }
 
-hr {
-  height: 5px;
-  border: none;
-  color: #272f31;
-  background-color: #615d4a;
-  width: 20%;
+
+
+#acorns {
+  margin-top: 20px;
 }
 
 #acorns h2 {
-  padding-top: 20px;
+
   text-align: center;
   text-transform: uppercase;
   font-size: 300%;
   font-style: bolder;
   color: #a39c90;
+}
+
+hr {
+  margin-top: 20px;
+  margin-left: 40%;
+  height: 5px;
+  border: none;
+  color: #272f31;
+  background-color: #615d4a;
+  width: 20%;
 }
