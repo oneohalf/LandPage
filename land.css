@@ -1,27 +1,98 @@
+/* Шрифты на всей странице */
+
 * {
-    /* font-family: 'Tinos', serif; */
-    /* font-family: 'Dosis', sans-serif; */
-    font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
+
+/* Фоновый рисунок */
 
 body {
-    background-image: url(mats/b.png);
+  background-image: url(mats/b.png);
+  margin: 2%; /* адаптивный отступ от края страницы*/
 }
 
+/* название */
+
 #title {
-    font-weight: light;
-    font-style: regular;
-    text-transform: uppercase;
-    color: #272F31
+  font-size: 75%;
+  font-weight: light;
+  font-style: regular;
+  text-transform: uppercase;
+  color: #272f31;
+}
+
+/* Меню */
+
+#menu {
+  margin: 0;
+  /* background-color: rgb(229, 207, 165, 0.1); */
+  width: 100%;
+  z-index: 1;
+}
+
+#menu ul {
+  list-style: none; /* Убрать точки в списке*/
+  text-align: center;
+  padding: 1.5%;
+}
+
+#menu ul li {
+  display: inline-table;
+  padding-left: 5%;
+  padding-top: 0;
+  padding-right: 5%;
+  padding-bottom: 0;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #615d4a;
+  line-height: 1;
+  color: #a39c90;
+  cursor: pointer;
+}
+
+#menu a:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #354041;
+  transition: width 0.3s ease-in-out;
+}
+
+#menu a:hover:after,
+#menu a:focus:after {
+  width: 100%;
+}
+
+@media (max-width: 812px) {
+  #menu {
+    display: none;
+  }
 }
 
 #kaban img {
-
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    padding-top: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  padding-top: 230px;
 }
- .class
+
+hr {
+  height: 5px;
+  border: none;
+  color: #272f31;
+  background-color: #615d4a;
+  width: 20%;
+}
+
+#acorns h2 {
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 300%;
+  font-style: bolder;
+  color: #a39c90;
+}
