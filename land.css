@@ -8,7 +8,7 @@
 
 body {
   background-image: url(mats/b.png);
-  margin: 0;
+  margin: 10px;
   /* адаптивный отступ от края страницы*/
 }
 
@@ -68,57 +68,7 @@ nav {
   font-size: 110%;
 }
 
-@media screen and (max-width: 710px) {
-  .toggle {
-    clear: both;
-    display: block;
-    text-align: center;
-    font-size: 18 px;
-    lineheight: 40 px;
-    width: 100%;
-    color: #000;
-    background: #a39c90;
-    transition: all 0.1s linear;
-  }
 
-  .toggle:hover {
-    background: #a39c90;
-  }
-
-  #checkbox-menu:checked + label .touch li {
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.7s linear;
-  }
-
-  #checkbox-menu:checked + label .touch {
-    height: 350px;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 0px;
-    transition: height 0.3s linear;
-  }
-
-  .menu li {
-    display: flex;
-    align-self: center;
-    width: 95%;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .menu li a {
-    width: 95%;
-    text-align: center;
-    align-self: center;
-    align-content: center;
-  }
-}
 
 #kaban {
   padding-top: 230px;
@@ -156,76 +106,155 @@ hr {
   color: #272f31;
   background-color: #615d4a;
   width: 20%;
+  margin-bottom: 50px;
+
+
 }
 
-/* Картинки адаптивные
+.specialize-container {
 
-Рвбота с блоком где лежат картинки
-Название блока .title_img
-
-Ставим маргин (внешние отступы)
-отступ от верхнего раздела - 25 пикселей
-отступ о нижнего раздела - 25 пикселей
-
-Ставим максимальную ширину отображения
-раздела - 712 пикселей.
-
-Далее устанавливаем размер раздела по умлочанию -100%
-
-Показываем как отображать элементы, исполдьзуем
-атрибут display(отображение) со свойством flex -
-теперь элементы все жлементы во всех родительских дивах
-(если они есть) становя в ряд и стают резиновыми
-ведёт себя как блочный элемент. При рассчете ширины блоков 
-приоритет у раскладки (при недостаточной ширине блоков контент может
- вылезать за границы).
-
- Выравниваем флекс элементы внутри контейнера перпендикулярно
- (вертикально) по линии поперечной оси при помощи элемента align - items
-в значении center
-
-Распределяем свободное пространство между элементами (не учитывается
-уже имеющиеся margin и padding( они уже считаются частью жлемента).
-В данном случае распределяем его по центру при помощи атрибута 
-justify-content в положении center
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 
 
- */
+}
 
-.title_img {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  width: 100%;
+
+.underline {
+
+  font-size: 110%;
+}
+
+.specialize-cards {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-/* Работаем с картинками в разделе title_img
-Устанавливаем их ширину по умолчанию
-Это 15 процентов от реальной ширины картинок.
-
-Устанавливаем отступ между картинками при помощи
-атрибута padding
-
- */
-
-.title_img img {
-  width: 10%;
-  padding: 6%;
+.text-container {
+  width: 95%;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.art {
+
+
+.text-paragraps,
+.middle-p {
   display: flex;
+  justify-content: space-between;
+
 }
 
-.art p {
-  margin: 30px;
-  width: 30%;
+.paragraph {
+  margin: 0 30px;
 }
 
-.bold {
-  font-size: 130%;
-  font-weight: bolder;
+.first-paragraph {
+  font-size: 120%;
   color: black;
+}
+
+.second-paragraph {
+  color: #9C9CA3
+}
+
+.specialize-cards img {
+  transition: 1s;
+
+
+}
+
+.specialize-cards img:hover {
+  transform: scale(1.1);
+
+
+}
+
+
+
+@media screen and (max-width: 710px) {
+  .toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18 px;
+    lineheight: 40 px;
+    width: 100%;
+    color: #000;
+    background: #a39c90;
+    transition: all 0.1s linear;
+  }
+
+  .toggle:hover {
+    background: #a39c90;
+  }
+
+  #checkbox-menu:checked+label .touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s linear;
+  }
+
+  #checkbox-menu:checked+label .touch {
+    height: 350px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+    transition: height 0.3s linear;
+  }
+
+  .menu li {
+    display: flex;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu li a {
+    width: 95%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+  }
+
+  .specialize-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bottom-card {
+    width: 128px;
+    margin: 0 auto;
+  }
+
+  .specialize-cards img {
+    width: 20%;
+  }
+
+  #acorns h2 {
+    font-size: 200%;
+  }
+
+  hr {
+
+    height: 3px;
+  }
+
+  #kaban {
+    padding-top: 130px;
+  }
+
+  .text-paragraps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
