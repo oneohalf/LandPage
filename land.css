@@ -68,8 +68,6 @@ nav {
   font-size: 110%;
 }
 
-
-
 #kaban {
   padding-top: 230px;
 }
@@ -107,22 +105,15 @@ hr {
   background-color: #615d4a;
   width: 20%;
   margin-bottom: 50px;
-
-
 }
 
 .specialize-container {
-
   width: 80%;
   margin: 0 auto;
   text-align: center;
-
-
 }
 
-
 .underline {
-
   font-size: 110%;
 }
 
@@ -137,13 +128,10 @@ hr {
   text-align: left;
 }
 
-
-
 .text-paragraps,
 .middle-p {
   display: flex;
   justify-content: space-between;
-
 }
 
 .paragraph {
@@ -156,22 +144,16 @@ hr {
 }
 
 .second-paragraph {
-  color: #9C9CA3
+  color: #9c9ca3;
 }
 
 .specialize-cards img {
   transition: 1s;
-
-
 }
 
 .specialize-cards img:hover {
   transform: scale(1.1);
-
-
 }
-
-
 
 @media screen and (max-width: 710px) {
   .toggle {
@@ -190,13 +172,13 @@ hr {
     background: #a39c90;
   }
 
-  #checkbox-menu:checked+label .touch li {
+  #checkbox-menu:checked + label .touch li {
     opacity: 1;
     visibility: visible;
     transition: all 0.7s linear;
   }
 
-  #checkbox-menu:checked+label .touch {
+  #checkbox-menu:checked + label .touch {
     height: 350px;
   }
 
@@ -244,7 +226,6 @@ hr {
   }
 
   hr {
-
     height: 3px;
   }
 
@@ -256,5 +237,23 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text-paragraps {
+    display: block;
+  }
+
+  .second-paragraph {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-column-rule: 1px solid #ccc;
+    -moz-column-rule: 1px solid #ccc;
+    column-rule: 1px solid #ccc;
   }
 }
