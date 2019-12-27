@@ -1,7 +1,7 @@
 /* Шрифты на всей странице */
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* Фоновый рисунок */
@@ -86,10 +86,22 @@ nav {
 }
 
 #acorns {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 #acorns h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 300%;
+  font-style: bolder;
+  color: #a39c90;
+}
+
+#portfolio-title {
+  margin-top: 60px;
+}
+
+#portfolio-title h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 300%;
@@ -108,13 +120,21 @@ hr {
 }
 
 .specialize-container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 70px;
+  margin-top: 60px;
+}
+
+.card img {
+  width: 50%;
 }
 
 .underline {
-  font-size: 110%;
+  font-size: 100%;
+  font-weight: bolder;
+  color: black;
 }
 
 .specialize-cards {
@@ -122,16 +142,17 @@ hr {
   justify-content: space-between;
 }
 
-.text-container {
-  width: 95%;
+.text-container,
+.portfolio-container {
+  width: 85%;
   margin: 0 auto;
-  text-align: left;
 }
 
 .text-paragraps,
 .middle-p {
   display: flex;
   justify-content: space-between;
+  line-height: 180%;
 }
 
 .paragraph {
@@ -139,8 +160,9 @@ hr {
 }
 
 .first-paragraph {
-  font-size: 120%;
+  font-size: 140%;
   color: black;
+  text-align: right;
 }
 
 .second-paragraph {
@@ -153,6 +175,39 @@ hr {
 
 .specialize-cards img:hover {
   transform: scale(1.1);
+}
+
+.portfolio-description {
+  color: #a39c90;
+}
+
+.portfolio-description {
+  margin-top: 0;
+}
+
+.portfolio-header {
+  margin-bottom: 0;
+}
+
+.portfolio-container {
+  width: 757px;
+  position: relative;
+
+}
+
+.portfolio-list {
+  position: absolute;
+  top: 25%
+  left: 25%
+  width: 757px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-list-item {
+  margin: 0 30px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -168,6 +223,15 @@ hr {
     -moz-column-gap: 30px;
     column-gap: 30px;
   }
+
+  .first-paragraph {
+    text-align: left;
+  }
+
+  #portfolio-title h2,
+  #acorns h2 {
+    font-size: 200%;
+  }
 }
 
 @media screen and (max-width: 710px) {
@@ -176,7 +240,7 @@ hr {
     display: block;
     text-align: center;
     font-size: 18 px;
-    lineheight: 40 px;
+    lineheight: 40px;
     width: 100%;
     color: #000;
     background: #a39c90;
@@ -248,7 +312,8 @@ hr {
     padding-top: 130px;
   }
 
-  .text-paragraps {
+  .text-paragraps,
+  .portfolio-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -258,5 +323,19 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .first-paragraph {
+    text-align: left;
+  }
+
+  #portfolio-title h2,
+  #acorns h2 {
+    font-size: 150%;
+  }
+
+  .portfolio-header,
+  .portfolio-description {
+    text-align: center;
   }
 }
