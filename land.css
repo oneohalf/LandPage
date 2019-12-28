@@ -187,19 +187,17 @@ hr {
 
 .portfolio-header {
   margin-bottom: 0;
+  font-size: 130%;
 }
 
 .portfolio-container {
-  width: 757px;
-  position: relative;
-
+  width: 700px;
 }
 
 .portfolio-list {
   position: absolute;
-  top: 25%
-  left: 25%
-  width: 757px;
+
+  width: 700px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -207,7 +205,16 @@ hr {
 }
 
 .portfolio-list-item {
-  margin: 0 30px;
+  margin: 0 60px;
+  text-align: center;
+}
+
+.portfolio-description {
+  transition: 1s;
+}
+
+.portfolio-description:hover {
+  color: #272f31;
 }
 
 @media screen and (max-width: 1000px) {
@@ -231,6 +238,30 @@ hr {
   #portfolio-title h2,
   #acorns h2 {
     font-size: 200%;
+  }
+
+  .portfolio-header {
+    margin-bottom: 0;
+    font-size: 110%;
+  }
+
+  .portfolio-container {
+    width: 470px;
+  }
+
+  .portfolio-list {
+    position: absolute;
+
+    width: 470px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .portfolio-list-item {
+    margin: 0 30px;
+    text-align: center;
   }
 }
 
