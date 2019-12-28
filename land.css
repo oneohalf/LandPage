@@ -9,6 +9,7 @@
 body {
   background-image: url(mats/b.png);
   margin: 10px;
+  background-repeat: no-repeat;
   /* адаптивный отступ от края страницы*/
 }
 
@@ -109,6 +110,18 @@ nav {
   color: #a39c90;
 }
 
+#workflow-title {
+  margin-top: 60px;
+}
+
+#workflow-title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 300%;
+  font-style: bolder;
+  color: #a39c90;
+}
+
 hr {
   margin-top: 20px;
   height: 5px;
@@ -195,8 +208,6 @@ hr {
 }
 
 .portfolio-list {
-  position: absolute;
-
   width: 700px;
   display: flex;
   flex-direction: row;
@@ -215,6 +226,57 @@ hr {
 
 .portfolio-description:hover {
   color: #272f31;
+}
+
+.workflow-text {
+  text-align: center;
+  font-size: 130%;
+}
+
+#word-color {
+  color: #87c6be;
+}
+
+#text-underline {
+  text-decoration: underline;
+}
+
+.workflow-picture {
+  display: block;
+  align-content: center;
+}
+
+.workflow-picture img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-text {
+  text-align: center;
+}
+.contact-text a {
+  color: #272f31;
+  font-size: 140%;
+  transition: 1s;
+}
+.contact-text a:hover {
+  color: #87c6be;
+  font-size: 140%;
+}
+
+.image-contacts {
+  margin-top: 50px;
+  display: flex;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-contacts img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 1000px) {
@@ -236,7 +298,8 @@ hr {
   }
 
   #portfolio-title h2,
-  #acorns h2 {
+  #acorns h2,
+  #workflow-title h2 {
     font-size: 200%;
   }
 
@@ -250,8 +313,6 @@ hr {
   }
 
   .portfolio-list {
-    position: absolute;
-
     width: 470px;
     display: flex;
     flex-direction: row;
@@ -361,7 +422,8 @@ hr {
   }
 
   #portfolio-title h2,
-  #acorns h2 {
+  #acorns h2,
+  #workflow-title h2 {
     font-size: 150%;
   }
 
