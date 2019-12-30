@@ -205,6 +205,7 @@ hr {
 
 .portfolio-container {
   width: 700px;
+
 }
 
 .portfolio-list {
@@ -241,25 +242,41 @@ hr {
   text-decoration: underline;
 }
 
-.workflow-picture {
-  display: block;
-  align-content: center;
+
+.workflow-picture-2 img {
+  display: none;
+
 }
 
 .workflow-picture img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 5%;
+  width: 90%;
+
 }
+
+.workflow-picture {
+  width: 90%;
+  align-content: center;
+  margin: 0 5%
+}
+
+
+
+
+
+
 
 .contact-text {
   text-align: center;
 }
+
 .contact-text a {
   color: #272f31;
   font-size: 140%;
   transition: 1s;
 }
+
 .contact-text a:hover {
   color: #87c6be;
   font-size: 140%;
@@ -324,6 +341,11 @@ hr {
     margin: 0 30px;
     text-align: center;
   }
+
+  .workflow-picture-2 img {
+    display: none;
+
+  }
 }
 
 @media screen and (max-width: 710px) {
@@ -343,13 +365,13 @@ hr {
     background: #a39c90;
   }
 
-  #checkbox-menu:checked + label .touch li {
+  #checkbox-menu:checked+label .touch li {
     opacity: 1;
     visibility: visible;
     transition: all 0.7s linear;
   }
 
-  #checkbox-menu:checked + label .touch {
+  #checkbox-menu:checked+label .touch {
     height: 350px;
   }
 
@@ -427,8 +449,54 @@ hr {
     font-size: 150%;
   }
 
+  #workflow-title {
+    margin: 0;
+  }
+
+  .workflow-text {
+    font-size: 200%;
+  }
+
+  .portfolio-list {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .portfolio-list-item {
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-container {
+    text-align: center;
+  }
+
   .portfolio-header,
   .portfolio-description {
     text-align: center;
   }
+
+
+  .workflow-picture {
+    display: none;
+  }
+
+  .workflow-picture-2 img {
+    display: block;
+    display: block;
+    margin: 0 5%;
+    width: 90%;
+
+  }
+
+
+  .workflow-picture-2 {
+    width: 90%;
+    align-content: center;
+    margin: 0 5%
+  }
+
 }
